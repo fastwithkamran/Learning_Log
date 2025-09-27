@@ -1,0 +1,6 @@
+# Ignore executables and binaries
+*.exe
+*.o
+*.class
+*.zip
+*.rar
