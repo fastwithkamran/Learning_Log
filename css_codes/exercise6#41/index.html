@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Ultra Edit</title>
+    <style>
+        * {
+    margin: 0%;
+    padding: 0%;
+}
+
+:root {
+    --font: 'Arial Narrow', Arial, sans-serif;
+}
+
+ul li {
+    list-style: none;
+    color: rgb(54, 55, 56);
+    font-size: large;
+}
+
+.logo {
+    width: 13vw;
+    margin: 1.7vw 6vw 0vw 7.7vw;
+}
+
+ul {
+    display: flex;
+}
+
+.line,
+.lang {
+    margin: 3vw 1vw 0vw 2.7vw;
+    height: 2vh;
+    white-space: nowrap;
+    font-family: var(--font);
+}
+
+.button {
+    border: 2.3px solid rgb(0, 0, 0);
+    margin: 2.2vw 1.1vw 0vw 11.5vw;
+    height: 2.8vh;
+    padding: 0.6vw 1.6vw;
+    border-radius: 2.8px;
+}
+
+.but {
+    text-decoration: none;
+    color: rgb(44, 42, 42);
+    white-space: nowrap;
+    font-family: var(--font);
+    font-weight: bolder;
+    font-size: large;
+}
+
+.arrow {
+    border: 0.3vw solid rgb(58, 57, 57);
+    border-width: 0px 2px 2px 0px;
+    display: inline-block;
+    padding: 2px;
+    margin: 0vw 0vw 0vw 0.5vw;
+    transform: rotate(45deg);
+}
+
+li:hover,
+a:hover {
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+}
+
+.down {
+    font-size: 4.5rem;
+    font-family: var(--font);
+    margin: 3.8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+.log {
+    width: 13vw;
+    margin: 0% 2% 0.17% 12.6%;
+}
+
+.do {
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.same {
+    font-size: 1.6rem;
+    margin: 0% 0% .7% 0%;
+}
+
+
+.box {
+    margin: 0% 10%;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    place-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.boxss {
+    margin: 10% 2%;
+    width: 20vw;
+    height: 15vw;
+    background-color: rgb(241, 237, 237);
+    border-radius: 6px;
+}
+
+.text {
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: var(--font);
+    font-weight: bold;
+    margin: 10% 0%;
+}
+
+.writ {
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font);
+    margin: 10% 0%;
+}
+
+.bit {
+    border-radius: 8px;
+    background-color: rgb(75, 151, 75);
+    width: 40%;
+    height: 15%;
+    margin: 0% 32%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bit1 {
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+    font-family: var(--font);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.bit:hover {
+    background-color: rgb(107, 173, 113);
+    cursor: pointer;
+}
+
+.foot {
+    width: 100%;
+    background-color: rgb(241, 237, 237);
+    height: 2.8vh;
+    text-align: center;
+}
+
+@media only screen and (max-width:1024px) {
+    .logo {
+        margin: 1.7vw 4.5vw 0vw 5.5vw;
+    }
+
+    .button {
+        margin: 2.2vw 1.1vw 0vw 5.5vw;
+    }
+
+    .bit {
+        width: 45%;
+        margin: 0% 29%;
+    }
+
+    .down {
+        font-size: 3.8rem;
+    }
+
+    .box {
+        margin: 0% 10% 0% 9%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .bit {
+        width: 60%;
+        margin: 0% 20%;
+    }
+
+    .boxss {
+        height: 22vh;
+    }
+
+    .logo {
+        margin: 1.7vw 3.8vw 0vw 4.2vw;
+    }
+
+    .button {
+        margin: 2.2vw 1vw 0vw 4.2vw;
+    }
+
+    .down {
+        font-size: 3rem;
+    }
+
+    ul li {
+        font-size: medium;
+    }
+
+    .lang,
+    .line {
+        margin: 3vw 1.6vw 0vw 1.6vw;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+
+    .down {
+        font-size: 2rem;
+    }
+
+    .bit {
+        width: 70%;
+        margin: 0% 16%;
+        height: 3vh;
+    }
+
+    .boxss {
+        height: 18vh;
+        width: 25vw;
+    }
+
+    .box {
+        grid-template-columns: 45% 45%;
+    }
+
+    .logo {
+        margin: 1.7vw 2vw 0vw 2vw;
+    }
+
+    .text {
+        font-size: 1.3rem;
+    }
+
+    .writ {
+        font-size: 0.8rem;
+    }
+
+    .bit1 {
+        font-size: 0.7rem;
+    }
+
+    .log {
+        margin: 0% 2% 0.17% 8%;
+    }
+
+    .same {
+        font-size: 1.1rem;
+    }
+
+    .do {
+        font-size: 0.7rem;
+        margin: 0% 2% 0.17% 10%;
+    }
+
+    ul li {
+        font-size: small;
+    }
+
+    .but {
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    .button {
+        height: 2.4vh;
+        margin: 2.2vw 1vw 0vw 1vw;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 0.6vw 0.5vw;
+        border-radius: 2.8px;
+    }
+
+    .lang,
+    .line {
+        margin: 3vw 0.9vw 0vw 0.8vw;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img class="logo" src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png"
+                        alt="Image"></li>
+                <li class="line">Products <i class="arrow"></i></li>
+                <li class="line">Pricing <i class="arrow"></i></li>
+                <li class="line">Resources <i class="arrow"></i></li>
+                <li class="line">Our company <i class="arrow"></i></li>
+                <li class="button"><a class="but" href="https://www.ultraedit.com/">BUY NOW</a></li>
+                <li class="lang">ENGLISH</li>
+            </ul>
+        </nav>
+    </header>       
+
+    <main>
+        <div class="down">
+            <p> Download <span class="bold">UltraEdit</span> for Windows</p>
+        </div>
+        <div>
+            <p class="do"><img class="log" src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png"
+                    alt="logo"><span class="same"> Download UltraEdit </span> &nbsp;&nbsp;&nbsp; released on
+                (2025-08-08)</p>
+        </div>
+
+        <div class="box">
+            <div class="boxss">
+                <p class="text">English</p>
+                <p class="writ">English</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+            <div class="boxss">
+                <p class="text">Deutsch</p>
+                <p class="writ">German</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+            <div class="boxss">
+                <p class="text">Italiano</p>
+                <p class="writ">Italian</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+            <div class="boxss">
+                <p class="text">Español</p>
+                <p class="writ">Spanish</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+            <div class="boxss">
+                <p class="text">français</p>
+                <p class="writ">French</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+            <div class="boxss">
+                <p class="text">Português</p>
+                <p class="writ">Brazilian Portuguese</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+            <div class="boxss">
+                <p class="text">日本</p>
+                <p class="writ">Japanese</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+            <div class="boxss">
+                <p class="text">한국어</p>
+                <p class="writ">Korean</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+            <div class="boxss">
+                <p class="text">华语</p>
+                <p class="writ">Chinese</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+            <div class="boxss">
+                <p class="text">華語</p>
+                <p class="writ">Traditional Chinese</p>
+                <div class="bit"><a class="bit1" href="ue_english_64.exe">Download 64-bit</a></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foot">Developed By Kamran</div>
+    </footer>
+</body>
+
+</html>
