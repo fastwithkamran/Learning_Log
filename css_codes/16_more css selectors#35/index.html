@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box:first-letter{
+            color: rgb(207, 35, 35);
+            font-size: 50px;
+
+        }
+        /* .box:nth-child(1){
+            background-color: red;
+        }
+        .boxes::first-line{
+            color: orange;
+        } */
+        /* .boxes *{
+            border: 2px solid black;
+            color: blue;
+        }
+        p,.box,[data="primary"]{
+            background-color: aqua;
+        } */
+
+        .box:nth-child(even){
+            background-color: aqua;
+        }
+
+        .boxes:after{
+            content: "Kamran is good";
+            color: rgb(219, 9, 9);
+        }
+        .boxes::before{
+            content: "Kamran is well";
+            color:cornflowerblue ;
+        }
+
+        ::selection{
+            background-color: blueviolet;
+            color: yellow;
+        }
+        input::placeholder{
+                  background-color: antiquewhite;
+                 
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <!-- Grouping of Selectors -->
+        <div data="primary" class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, ex optio? Error sunt aliquid tempora quia molestiae? Nulla, saepe quis enim ipsam nemo nobis magni incidunt fuga illo nam dolore quam veniam blanditiis vitae ullam cupiditate non, eveniet autem totam, debitis unde ipsa! Rem, consectetur mollitia!</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum iste accusamus hic maiores nam eum odio iure odit optio. Eaque molestiae obcaecati quam, ex quaerat provident odio asperiores libero saepe eius, consectetur quasi delectus hic numquam nihil. Temporibus, excepturi. Reiciendis fuga saepe modi, corporis reprehenderit ab, consectetur quae id hic nulla soluta cum!</div>
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi veritatis cumque, dignissimos dolorum tempora officia, itaque, tenetur adipisci totam labore ex excepturi alias commodi ut quisquam tempore esse distinctio repellendus? Sit adipisci, dolor fugit suscipit repudiandae exercitationem ipsa consequuntur voluptate placeat. Perspiciatis.</div>
+        <div> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sunt, provident perferendis ea neque explicabo repellendus vitae dolorem soluta id hic numquam quasi omnis molestias, illo, dolores sit? Quas assumenda quisquam reiciendis amet facilis.</p> </div>
+        <input type="text" placeholder="Your text here">
+    </div>
+</body>
+</html>

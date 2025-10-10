@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        /* The specifity of element is 1 */
+        h1
+        {
+           background-color: blueviolet;
+        }
+        /* The specifity of class is 10 */
+        .red{
+            /* background-color: red !important; */
+        }
+        /* The specifity of element and class is 1+10 */
+        h1.byellow{
+            background-color: yellow;
+        }
+        /* The specifity of class is 10 */
+        .cpurple{
+            background-color: purple;
+        }
+        /* The specifity of ATTRIBUTE is 10 */
+        [data-x=a]{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div><h1 class="red byellow cpurple" data-x="a">CSS SPECIFICITY</h1></div>
+     <div>inline> id> class or attribute> element selector> universal selector</div>
+     <div>position> origin> important</div>
+     <div> To calculate Specificity
+        <ol>
+            <li>Universal selector=0</li>
+            <li>Element =1</li>
+            <li>class =10</li>
+            <li>id =100</li>
+            <li>inline =1000</li>
+        </ol> </div>
+     </body>
+</html>
+
