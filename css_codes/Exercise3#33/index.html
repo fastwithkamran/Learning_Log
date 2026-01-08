@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicolor Website</title>
+    <style>
+        :root {
+            --color: rgb(13, 65, 9);
+            --seccolor: rgb(200, 240, 226);
+            --defpad: 0px 40px 0px 40px;
+            --defmar: 5px;
+            --defbor-rad: 9px;
+        }
+        body{
+            background-color: var(--seccolor);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+            padding: var(--defpad);
+            margin: var(--defmar);
+            background-color: var(--seccolor);
+            color: var(--color);
+            border-radius: var(--defbor-rad);
+        }
+
+        ul {
+            display: flex;
+            background-color: var(--color)
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</header>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: skyblue;
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: green;
+            border-radius: 100px;
+            position: sticky;
+            top: 100%;
+            animation: ball 1s 1s 1 linear, ball1 1s 2s 1 linear,ball2 1s 3s 1 linear, ball3 1s 4s 1 linear,ball4 1s 5s 1 linear, ball5 1s 6s 1 linear;
+        }
+
+        @keyframes ball {
+            from {}
+
+            to {
+                transform: translateY(-60vh) translateX(15vw);
+                background-color: yellow;
+            }
+
+        }
+
+        @keyframes ball1 {
+            from {
+                transform: translateY(-60vh) translateX(15vw);
+            }
+
+            to {
+                transform: translateY(0vh) translateX(30vw);
+                background-color: red;
+            }
+        }
+        @keyframes ball2{
+            from{
+                transform: translateY(0vh) translateX(30vw);
+            }
+            to{
+                transform: translateY(-60vh) translateX(45vw);
+                background-color: pink;
+            }
+        }
+        @keyframes ball3 {
+            from {
+                transform: translateY(-60vh) translateX(45vw);
+            }
+
+            to {
+                transform: translateY(0vh) translateX(60vw);
+            background-color: purple;}
+        }
+         @keyframes ball4{
+            from{
+                transform: translateY(0vh) translateX(60vw);
+            }
+            to{
+                transform: translateY(-60vh) translateX(75vw);
+            background-color: orange;}
+        }
+          @keyframes ball5 {
+            from {
+                transform: translateY(-60vh) translateX(75vw);
+            }
+
+            to {
+                transform: translateY(0vh) translateX(96.5vw);
+            background-color: green;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
