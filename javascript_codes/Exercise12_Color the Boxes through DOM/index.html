@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .box {
+            border: 2px solid black;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+        <div id="box2" class="box">Box</div>
+        <div id="box3" class="box">Box</div>
+        <div id="box4" class="box">Box</div>
+        <div id="box5" class="box">Box</div>
+    </div>
+
+    <script>
+        document.querySelector(".box").style.backgroundColor = "blue"
+        document.querySelector(".box").style.color = "pink"
+        document.getElementById("box2").style.backgroundColor = "green"
+        document.getElementById("box2").style.color = "red"
+        document.getElementById("box3").style.backgroundColor = "purple"
+        document.getElementById("box3").style.color = "yellow"
+        document.getElementById("box4").style.backgroundColor = "orange"
+        document.getElementById("box4").style.color = "white"
+        document.getElementById("box5").style.backgroundColor = "maroon"
+        document.getElementById("box5").style.color = "black"
+    </script>
+</body>
+
+</html>

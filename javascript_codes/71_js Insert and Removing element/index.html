@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container understandingclassList AndclassName">
+        <div class="box" style="display:flex;" data-createdby"Kamran" data-studentof"FAST">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+    </div>
+</body>
+<scipt src="script.js"></scipt>
+<scipt src="attribute_methods.js"></scipt>
+<script>
+    // Insertion methods
+    let div=document.createElement("div")
+    div.innerHTML="My name is <b> Kamran </b>"
+    div.setAttribute("class","created")
+    document.querySelector(".container").append(div) //appending my new div into the class which is already exist in the DOM 
+    document.querySelector(".container").prepend(div) //prepend means to append at the top of the existing class
+    document.querySelector(".container").before(div) //before means to append the new div before the existing class
+    document.querySelector(".container").after(div) //after means to append the new div after the existing class
+    // document.querySelector(".container").replaceWith(div) //replace the given node with the new node
+
+// Insert Adjacent HTML/Text/Element
+let cont=document.querySelector(".container")
+cont.insertAdjacentHTML("afterbegin","How are you future Kamran, today is 1/13/2026 8:03 pm in Karachi,Pakistan")
+// cont.insertAdjacentHTML("beforebegin","How are you future Kamran, today is 1/13/2026 8:03 pm in Karachi,Pakistan")
+// cont.insertAdjacentHTML("afterend","How are you future Kamran, today is 1/13/2026 8:03 pm in Karachi,Pakistan")
+// cont.insertAdjacentHTML("beforeend","How are you future Kamran, today is 1/13/2026 8:03 pm in Karachi,Pakistan")
+</script>
+</html>
