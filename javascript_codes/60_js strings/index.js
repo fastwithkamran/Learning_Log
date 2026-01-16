@@ -52,3 +52,24 @@ console.log("has\"".length);
 console.log(real_name.startsWith("Kam"));
 // EndWith function
 console.log(real_name.endsWith("Yan"));
+
+// To convert the string into lowercase
+let word="APPLE"
+console.log(word.toLowerCase())
+
+// TO extract the amount from the string
+let para="Please give Rs1000"
+let str=[];
+let count=0;
+for (let index = 0; index < para.length; index++) {
+    const element = para[index];
+    if(element==' ')
+        continue;
+
+    if(element>=0){
+        str[count]=element;
+        count++;
+    }
+}
+console.log(str)
+

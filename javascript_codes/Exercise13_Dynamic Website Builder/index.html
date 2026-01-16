@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Website Builder</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .button {
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90px;
+            height: 45px;
+            font-size: larger;
+            border-radius: 40px;
+            color: white;
+            background-color: red;
+        }
+
+        .card {
+            border: 2px solid black;
+            margin-top: 2%;
+            height: 20%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .text-box {
+            margin-top: 4%;
+            margin-left: 2%;
+            display: grid;
+            grid-template-rows: auto auto;
+            color: white;
+        }
+
+        .title {
+            font-size: 25px;
+            font-weight: 120px;
+            display: flex;
+            align-items: center;
+        }
+
+        body {
+            background-color: grey;
+        }
+
+        .image {
+            position: relative;
+        }
+
+        .duration {
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 50px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: black;
+            color: white;
+            opacity: 0.6;
+            left: 290px;
+            bottom: 5px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="button">
+            Create
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -22,4 +22,4 @@ e.style.backgroundColor="green"
 console.log(document.getElementsByTagName("div"))
 
 // To get element by name; similar to Id- it use index
-document.getElementsByName("FAST")[0].style.backgroundColor="purple"
+document.getElementsByName("FAST")[0].style.backgroundColor="purple" 
