@@ -1,0 +1,13 @@
+{
+  "name": "02_modules",
+  "version": "1.0.0",
+  "description": "Learning Modules in node.js",
+  "license": "ISC",
+  "author": "fastwithkamran",
+  "type": "commonjs",
+  "main": "modules.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node modules.js"
+  }
+}
