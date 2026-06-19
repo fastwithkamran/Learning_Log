@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling & SetIntervals and Timeouts</title>
+</head>
+
+<body>
+    <div class="container"
+        style="width: 400px; height: 400px; background-color: lightgray; display: flex; align-items: center; justify-content: center;">
+        <div class="childcontainer"
+            style="width: 300px; height: 300px; background-color: lightcoral; display: flex; align-items: center; justify-content: center;">
+            <div class="child"
+                style="width: 200px; height: 200px; background-color: lightblue; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+                Hello, World!
+            </div>
+        </div>
+    </div>
+    <script>
+
+        document.querySelector('.childcontainer').addEventListener('click', function (e) {
+            e.stopPropagation(); // Stop the event from bubbling up to the container
+            alert('Child Container Clicked');
+        });
+        document.querySelector('.child').addEventListener('click', function () {
+            alert('Child Clicked');
+        });
+        document.querySelector('.container').addEventListener('click', function () {
+            alert('Container Clicked');
+        });
+
+        let a = setInterval(() => {
+            document.querySelector(".child").style.background = "green"
+        }, 3000);
+
+        // clear interval: the setInterval function will return a value in the console, which can run as to stop the setInterval method as clearInterval(value)
+        
+        // setTimeout to change color after some interval for one time
+
+        // clearTimeout to stop setTimeout before it runs
+    
+    </script>
+</body>
+
+</html>
