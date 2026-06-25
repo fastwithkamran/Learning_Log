@@ -21,6 +21,8 @@ Default Thread Pool Size = 4 ---- Max Depends on Hosting Server Virtual CPUs / C
 
 The Event Queue and Event Loop live inside the Node.js process memory on your hosting server (e.g., AWS, DigitalOcean, or your local machine during development). Furthermore, the Event Queue is actually managed by libuv (a C++ library built into Node.js), while the V8 engine is simply responsible for executing the JavaScript code once the queue hands it over.
 
+![Image](architecture.png)
+
 ### Example
 
 1. The Click Triggers an HTTP RequestWhen the user clicks, their browser sends a digital packet (an HTTP Request) across the internet. This packet travels from their device straight to Vercel's closest data center.
