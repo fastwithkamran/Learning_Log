@@ -31,6 +31,18 @@ The Event Queue and Event Loop live inside the Node.js process memory on your ho
 
 4. The Queue Disappears The moment the browser receives the response, Vercel shuts down or freezes the container. The Event Queue is completely wiped out until the next click happens.
 
+## HTTP Methods
+
+**Get**: Get is used to retrieve data from the server. It is a read-only operation and does not modify any data on the server.
+
+**POST**: Post is used to send data to the server. It is used to create new resources on the server.
+
+**PUT**: Put is used to update existing resources on the server. It replaces the entire resource with the new data provided.
+
+**PATCH**: Patch is used to update existing resources on the server. It only modifies the specified fields of the resource.
+
+**DELETE**: Delete is used to remove resources from the server. It deletes the specified resource.
+
 ## Download Node Packages
 
 <https://www.npmjs.com>
