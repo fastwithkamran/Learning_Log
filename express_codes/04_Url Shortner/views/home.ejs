@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      h1 {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>URL Shortner</h1>
+
+     <% if(locals.empty_error) { %>
+    <script>
+        alert('<%= empty_error %>');
+    </script>
+      <% }%>
+
+     <% if(locals.unique_error) { %>
+    <script>
+        alert('<%= unique_error %>');
+    </script>
+      <% }%>
+
+    <% if(locals.id) { %>
+      <p>ShortId {must save on your locals}: <%= id %></p>
+    <p>Shortened URL Generated: http://localhost:8000/url/<%= id %></p>
+    
+    <% } else { %>
+    <div style="margin-bottom: 20px;">
+        <form style="font-size: 30px;" method="POST" action="/">
+            <label>Enter your original URL</label>
+            <input type="text" name="url" placeholder="https://example.com">
+            <button type="submit">Generate</button>           
+        </form>
+    </div>
+    <div style="margin-bottom: 20px;">
+      <form style="font-size: 30px;" method="GET" action="/analytics">
+        <label>Enter your Short Code</label>
+        <input type="text" name="shortId" placeholder="h54K_30Q">
+        <button type="submit">Generate Analytics</button> 
+      </form>
+    </div>
+    <% if(locals.redirectUrl) {%>
+   <table>
+ <tr>
+  <th>Redirect URL</th>
+  <th>Short URL</th>
+  <th>No.of clicks</th>
+ </tr>
+ <tr>
+  <td style="padding-right: 20px;"><%= redirectUrl %></td>
+  <td style="padding-right: 20px;">http://localhost:8000/url/<%= shortUrl %></td>
+  <td><%= totalClicks %></td>
+ </tr>
+   </table>
+    <% } else if (locals.error) { %>
+    <script>
+        alert('<%= error %>');
+        window.location.href = "/";
+    </script>
+    <% } } %>
+  </body>
+</html>
