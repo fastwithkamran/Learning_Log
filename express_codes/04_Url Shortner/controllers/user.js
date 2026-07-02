@@ -21,7 +21,7 @@ async function handleLoginUser(req, res) {
     });
 
   const token = setUser(user);
-  // ends the unique ID to the user's browser as a cookie named uid
+  // sends the unique ID to the user's browser as a cookie named uid
   res.cookie("uid", token);
   return res.redirect("/");
 }
