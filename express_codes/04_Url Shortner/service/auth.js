@@ -1,17 +1,27 @@
-// Using HashMap creates a server-side storage container for sessions
-const sessionIdToUserMap = new Map();
+const jwt = require("jsonwebtoken");
+const secret = "kamran$$%$123";
 
-// Saves user data linked to a specific session ID
-function setUser(id, user){
-    sessionIdToUserMap.set(id,user)
+function setUser(user) {
+  return jwt.sign(
+    {
+      _id: user._id,
+      email: user.email,
+    },
+    secret,
+  );
 }
 
 // Get user data using a session ID
-function getUser(id){
-   return sessionIdToUserMap.get(id)
+function getUser(token) {
+  if (!token) return null;
+  try {
+    return jwt.verify(token, secret);
+  } catch (error) {
+    return null;
+  }
 }
 
 module.exports = {
-    setUser,
-    getUser
-}
+  setUser,
+  getUser,
+};

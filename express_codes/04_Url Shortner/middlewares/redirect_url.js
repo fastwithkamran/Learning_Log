@@ -3,16 +3,13 @@ const URL = require("../models/url");
 async function handleCheckDuplicatedUrl(req, res, next) {
   const body = req.body;
   if (!body || !body.url)
-    return res.render("home", {
+    return res.json({
       empty_error: "Type URL Dont PRANK my Server",
     });
-  const result = await URL.findOne({ redirectUrl: body.url });
+  const result = await URL.findOne({ redirectURL: body.url });
 
   if (!result) next();
-  else
-    return res.render("home", {
-      unique_error: "This URL shortcode already exist... Must be Unique URL",
-    });
+  else return res.json({ err: "This URL shortlink already being generated, try other" });
 }
 
 module.exports = handleCheckDuplicatedUrl;

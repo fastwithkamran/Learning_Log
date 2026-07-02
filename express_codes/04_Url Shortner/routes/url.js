@@ -1,3 +1,5 @@
+const handleCheckDuplicatedUrl = require("../middlewares/redirect_url.js") 
+
 const express = require("express");
 const {
   handleGenerateNewShortURL,
@@ -6,7 +8,7 @@ const {
 
 const router = express.Router();
 
-router.post("/", handleGenerateNewShortURL);
+router.post("/", handleCheckDuplicatedUrl,handleGenerateNewShortURL);
 
 router.get("/analytics/:shortId", handleGetAnalytics);
 
